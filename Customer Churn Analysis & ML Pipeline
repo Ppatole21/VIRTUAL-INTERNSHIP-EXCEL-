@@ -1,0 +1,42 @@
+I'm excited to share the End-to-End Customer Churn Analytics & Prediction Pipeline I built during my internship!🎯
+
+## 📌 Quick Overview:-
+
+1] Goal:- Predict which customers are likely to stop using the service.
+2] Output:- A churn probability score (0.0 to 1.0) for every active user.
+3] Impact:- Triggers targeted discount emails to bring back at-risk users before they leave.
+
+## 🔄 Project Pipeline:-
+
+* Clean Data:- Remove duplicate records and fix missing values in customer logs.
+* Define Churn (SQL):- Analyzed historical orders—90% of repeat users buy within 90 days, so >90 days inactive = Churned.
+* Engineer Features:- Calculate inactivity days, recent order counts, and average spend per user.
+* Train Model:- Build a binary classifier using time-series split (preventing data leakage).
+* Take Action:- Run batch predictions weekly to send promotional emails to high-risk users.
+
+## 🛠️ Key Metrics & Features:-
+
+| Feature Name | Business Hypothesis | SQL Formula |
+
+| days_since_last_order | Inactivity strongly correlates with churn risk. | DATEDIFF(CURRENT_DATE, MAX(order_date)) |
+| orders_last_6_months | High recent frequency indicates strong loyalty. | COUNT(order_id) (Last 6 months) |
+| avg_order_value | Higher spending tiers exhibit unique retention behaviors. | AVG(total_amount) |
+
+## 🧰 Tech Stack:-
+
+ * Languages:- Python, SQL
+ * Libraries:- Pandas, NumPy, Scikit-Learn, XGBoost, Matplotlib
+ * Tools:- PostgreSQL, Jupyter Notebook, Git
+
+#ComputerEngineering #MachineLearning #CustomerChurn #TechPortfolio
+Project Showcase 📊
+Excited to share my Customer Churn Analytics & ML Pipeline project! 🎯
+💡 Key Highlights:
+✅ Defined churn criteria using historical SQL analysis (>90 days inactive)
+✅ Engineered user activity features based on recency, frequency, and spend
+✅ Trained XGBoost classification models with time-series splitting to prevent data leakage
+✅ Automated churn risk scoring to target high-risk accounts with win-back campaigns
+Transforms raw customer logs into proactive business intelligence! 💡
+Open to feedback and connecting with fellow engineers! 🤝
+#ComputerEngineering #DataScience #MachineLearning #CustomerChurn #PredictiveAnalytics #SQL #Python #XGBoost #DataPipeline #TechPortfolio #InternshipProject
+Skills: Machine Learning • SQL • Python • Feature Engineering • XGBoost • Predictive Modeling
